@@ -1,9 +1,11 @@
-import React from 'react'
+import React,{useContext} from 'react'
+import {AppContext} from '../AppContext'
 
-function Two(props) {
+function Two() {
+    const {data} = useContext(AppContext)
   return (
     <div style={{backgroundColor: 'blue',width:"200px"}}>
-        <h1>Layer Two {props.data}</h1>
+        <h1>Layer Two {data}</h1>
     </div>
   )
 }
